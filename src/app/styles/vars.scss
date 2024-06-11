@@ -1,0 +1,25 @@
+:root {
+	--container-width: 1310px;
+	--container-padding: 10px;
+
+	--main-family: 'Roboto Condensed';
+	--roboto: 'Roboto';
+	--dosis: 'Dosis';
+
+	--font-size: 16px;
+	--font-family: var(--main-family);
+	--font-weight: 400;
+
+	--dark-blue: #2b4074;
+	--white: #fff;
+	--gray1: #dadada;
+	--gray2: #9b9b9b;
+	--gray3: #797979;
+	--gray-black: #4a4a4a;
+	--rally-green: #7ebf84;
+
+	--color: var(--white);
+
+	--negative-color: red;
+	--backdrop: rgba(0, 0, 0, 0.75);
+}

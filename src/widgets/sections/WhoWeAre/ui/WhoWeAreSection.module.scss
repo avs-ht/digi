@@ -1,0 +1,19 @@
+.section {
+	background: url('../images/background.jpg') no-repeat center / cover;
+	.container {
+		.title {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			span:nth-child(1) {
+				font-size: clamp(1.75rem, 0.5357rem + 6.0714vw, 6rem);
+				margin-bottom: 32px;
+			}
+			span:nth-child(2) {
+				font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+				line-height: 111%;
+			}
+			margin-bottom: 32px;
+		}
+	}
+}
