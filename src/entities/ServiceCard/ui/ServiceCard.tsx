@@ -15,7 +15,7 @@ export const ServiceCard = ({ card }: { card: ICard }) => {
 			setTimeout(() => {}, 2000)
 			return axios.get(`https://jsonplaceholder.typicode.com/todos/1`)
 		},
-		select: data => data.data,
+		select: (data: { data: unknown }) => data?.data,
 		refetchOnMount: false,
 	})
 	return (
