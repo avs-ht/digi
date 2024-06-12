@@ -1,0 +1,38 @@
+.container {
+	position: relative;
+	max-width: min-content;
+	transform: 0.3s;
+	.button {
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.title {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: white;
+		color: #4a4a4a;
+		padding-block: 7px 11px;
+		padding-left: 20px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		transition: 0.2s;
+	}
+	border: 10px solid transparent;
+	transition: 0.3s;
+	&:hover {
+		.title {
+			bottom: 20px;
+			background-color: var(--dark-blue);
+			color: var(--light-yellow);
+		}
+		.button {
+			opacity: 1;
+		}
+		border: 10px solid var(--dark-blue);
+	}
+}

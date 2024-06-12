@@ -1,0 +1,35 @@
+.socials {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-bottom: 40px;
+
+	@media (max-width: 425px) {
+		grid-template-columns: 1fr;
+		gap: 16px;
+		place-items: center;
+	}
+	.socialItem {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-block: 18px;
+		.socialLink {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		border: 1px solid var(--rally-green);
+		&:nth-child(n + 1) {
+			border-left: 0;
+		}
+		&:nth-child(n + 4) {
+			border-right: 0;
+		}
+		@media (max-width: 425px) {
+			border: 0;
+			padding-block: 0;
+		}
+	}
+}

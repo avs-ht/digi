@@ -1,4 +1,4 @@
-import { InfoIcon } from '../icons/InfoIcon'
+import { InfoIcon } from '../../../shared/ui/icons/InfoIcon'
 import { SearchIcon } from '../icons/SearchIcon'
 import { IProject } from '../model/types'
 

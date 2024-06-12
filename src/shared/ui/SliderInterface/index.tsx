@@ -13,6 +13,7 @@ interface Props {
 	selectSlideFn: (i: number) => void
 	paginationClassName?: string
 	buttonsClassName?: string
+	showButtons?: boolean
 }
 
 export const SliderInterface = ({ props }: { props: Props }) => {
@@ -21,43 +22,46 @@ export const SliderInterface = ({ props }: { props: Props }) => {
 		nextSlideFn,
 		prevSlideFn,
 		selectSlideFn,
+		showButtons = true,
 		...classNames
 	} = props
 	const { paginationClassName = '', buttonsClassName = '' } = classNames
 	const [activeElement, setActiveElement] = useState(0)
 	return (
 		<>
-			<div
-				className={clsx(
-					styles.buttons,
-					{
-						[buttonsClassName]: !!buttonsClassName,
-					},
-					[],
-				)}
-			>
-				<button
-					disabled={activeElement === 0}
-					className={styles.prev}
-					onClick={() => {
-						prevSlideFn
-						setActiveElement(prev => prev - 1)
-					}}
+			{showButtons && (
+				<div
+					className={clsx(
+						styles.buttons,
+						{
+							[buttonsClassName]: !!buttonsClassName,
+						},
+						[],
+					)}
 				>
-					<ForwardIcon />
-				</button>
+					<button
+						disabled={activeElement === 0}
+						className={styles.prev}
+						onClick={() => {
+							prevSlideFn
+							setActiveElement(prev => prev - 1)
+						}}
+					>
+						<ForwardIcon />
+					</button>
 
-				<button
-					disabled={activeElement === elementsAmount - 1}
-					className={styles.next}
-					onClick={() => {
-						nextSlideFn()
-						setActiveElement(prev => prev + 1)
-					}}
-				>
-					<BackIcon />
-				</button>
-			</div>
+					<button
+						disabled={activeElement === elementsAmount - 1}
+						className={styles.next}
+						onClick={() => {
+							nextSlideFn()
+							setActiveElement(prev => prev + 1)
+						}}
+					>
+						<BackIcon />
+					</button>
+				</div>
+			)}
 			<ul
 				className={clsx(
 					styles.pagination,

@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	.title {
+		color: var(--light-yellow);
+		font-weight: bold;
+		letter-spacing: 2px;
+	}
+	.content {
+		font-size: 0.75rem;
+		line-height: 20px;
+		font-family: var(--roboto);
+	}
+}

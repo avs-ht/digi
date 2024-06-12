@@ -6,6 +6,7 @@ import { MenuButton } from './MenuButton'
 export const Header = () => {
 	return (
 		<header className={styles.header}>
+			<span id="up"></span>
 			<Container className={styles.container}>
 				<LogoIcon />
 				<MenuButton />

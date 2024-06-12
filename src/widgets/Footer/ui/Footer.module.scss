@@ -1,0 +1,40 @@
+.footer {
+	padding-top: clamp(5.3125rem, 4.0089rem + 6.5179vw, 9.875rem);
+	padding-bottom: clamp(3.9375rem, 3.2768rem + 3.3036vw, 6.25rem);
+	background-color: var(--dark-blue);
+	position: relative;
+	.container {
+		padding-inline: 40px;
+		.logoContainer {
+			width: 230px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 3px;
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: var(--dark-blue);
+		}
+		.title {
+			letter-spacing: 2px;
+			font-size: 1.5rem;
+			margin-bottom: 40px;
+			@media (max-width: 1024px) {
+				font-size: 2rem;
+				line-height: 32px;
+			}
+			@media (max-width: 640px) {
+				font-size: 1.5rem;
+				line-height: 26px;
+			}
+			@media (max-width: 425px) {
+				font-size: 1.25rem;
+				line-height: 22px;
+				text-align: center;
+			}
+		}
+	}
+}
