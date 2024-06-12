@@ -1,3 +1,18 @@
 .element {
-
+	font-size: 1.125rem;
+	color: #f9f6e5;
+	background-color: var(--dark-blue);
+	padding-block: 16px;
+	padding-inline: 5px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-weight: 400;
+	text-transform: uppercase;
+	cursor: pointer;
+	max-width: 210px;
+	&.inverted {
+		color: var(--dark-blue);
+		background-color: #f9f6e5;
+	}
 }

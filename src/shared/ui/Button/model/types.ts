@@ -4,6 +4,7 @@ export const defaultElement = 'button'
 export interface IElementProps<E extends ElementType = ElementType> {
 	children: React.ReactNode
 	className?: string
+	inverted?: boolean
 	as?: E
 }
 

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 
 import { clsx } from '$/shared/helpers/clsx'
+import { BackIcon } from './icons/BackIcon'
+import { ForwardIcon } from './icons/ForwardIcon'
 import styles from './index.module.scss'
 
 interface Props {
@@ -34,11 +36,26 @@ export const SliderInterface = ({ props }: { props: Props }) => {
 					[],
 				)}
 			>
-				<button className={styles.prev} onClick={prevSlideFn}>
-					&lt;
+				<button
+					disabled={activeElement === 0}
+					className={styles.prev}
+					onClick={() => {
+						prevSlideFn
+						setActiveElement(prev => prev - 1)
+					}}
+				>
+					<ForwardIcon />
 				</button>
-				<button className={styles.next} onClick={nextSlideFn}>
-					&gt;
+
+				<button
+					disabled={activeElement === elementsAmount - 1}
+					className={styles.next}
+					onClick={() => {
+						nextSlideFn()
+						setActiveElement(prev => prev + 1)
+					}}
+				>
+					<BackIcon />
 				</button>
 			</div>
 			<ul

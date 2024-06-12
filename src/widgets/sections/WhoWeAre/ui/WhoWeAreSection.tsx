@@ -9,13 +9,16 @@ export const WhoWeAreSection = () => {
 		<section className={styles.section}>
 			<Container className={styles.container}>
 				<MainTitle />
-				<Button className={styles.button}>Подробнее</Button>
+				<Button className={styles.button} as="a" target="_blank">
+					Подробнее
+				</Button>
 				<SliderInterface
 					props={{
 						elementsAmount: 3,
 						nextSlideFn: () => {},
 						prevSlideFn: () => {},
 						selectSlideFn: () => {},
+						paginationClassName: styles.pagination,
 					}}
 				/>
 			</Container>

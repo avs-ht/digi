@@ -9,12 +9,20 @@ export const Button = <E extends ElementType>({
 	children,
 	as,
 	className = '',
+	inverted = false,
 	...props
 }: ButtonType<E>) => {
 	const Element = as || defaultElement
 	return (
 		<Element
-			className={clsx(styles.element, { [className]: !!className }, [])}
+			className={clsx(
+				styles.element,
+				{
+					[styles.inverted]: inverted,
+					[className]: !!className,
+				},
+				[],
+			)}
 			{...props}
 		>
 			{children}
